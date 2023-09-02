@@ -8,10 +8,7 @@
     
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <py-env>
-        - paths:
-          - C:\Users\GIGABYTE\Desktop\vp.py
-      </py-env>
+
 </head>
 <body>
     <!-- Use "navbar navbar-expand-lg navbar-light bg-light" to create the horizontal navbar -->
@@ -100,9 +97,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">session</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
+        <li><a href="#">set session</a></li>
+        <li><a href="#">Report</a></li>
+        <li><a href="#">Client</a></li>
       </ul>
     </div>
   </div>
@@ -123,32 +120,32 @@
 
     <div class="col-sm-9">
       <div class="well">
-        <h4><img src="img_girl.jpg" >Dolly Joshi</h4>
-        <p>Child Psychologist</p>
+        <h4><img src="img_girl.jpg" ><%= data.name %></h4>
+        <p><%= data.speciality %></p>
       </div>
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
             <h4>Speciality</h4>
-            <p>Child psychology</p> 
+            <p><%= data.speciality %></p> 
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
             <h4>Qualifications</h4>
-            <p>Phd in Psychology</p> 
+            <p><%= data.qualifications %></p> 
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
             <h4>Experience</h4>
-            <p>10+ years</p> 
+            <p><%= data.experience %></p> 
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
             <h4>Registration date</h4>
-            <p>12-08-2023</p> 
+            <p><%= data.registration_date %></p> 
           </div>
         </div>
       </div>
@@ -156,17 +153,17 @@
         <div class="col-sm-4">
           <div class="well">
          <h4>Services</h4>
-            <p>Anxiety and depression</p> 
-            <p>Child therapy</p> 
-            <p>Stress management</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
           </div>
         </div>
         <div class="col-sm-4">
           <div class="well">
         <h4>Contact Details</h4>
-            <p>PhoneNo: 1234567890</p> 
-            <p>Email: abc@gmail.com</p> 
-            <p>Address: 123 Main Street, Indore</p> 
+            <p>PhoneNo: <%= data.phone %></p> 
+            <p>Email: <%= data.email %></p> 
+            <p>Address: <%= data.address %></p> 
           </div>
         </div>
         <div class="col-sm-4">
@@ -378,7 +375,7 @@
   
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      � 2020 Copyright:
+      © 2020 Copyright:
       <a class="text-white" href="">MindCare.com</a>
     </div>
     <!-- Copyright -->
