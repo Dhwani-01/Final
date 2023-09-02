@@ -187,8 +187,14 @@ app.get('/session_set',(req,res)=>{
 })
 
 app.get('/view_psychologist',(req,res)=>{
-    res.render('view_psychologist.ejs')
-})
+  if (req.isAuthenticated()) {
+  const ID = req.body.id;
+  const sql = 'SELECT * FROM psy where id= ?';
+  db.query(sql, ID,(err, data) => {
+    if (err) throw err;
+    res.render('view_psychologist.ejs', { userData: data });
+  });
+  });
 
 
 app.get("/signup", checkAuthenticated, (req, res) => {
