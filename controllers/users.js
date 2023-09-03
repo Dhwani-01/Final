@@ -49,6 +49,25 @@
 //   );
 // };
 
+
+//app.post('/set-session', (req, res) => {
+// const {user_name, user_id, psychologist_id, session_date, session_time } = req.body;
+//  const query = "INSERT INTO sessions (user_name, user_id, psychologist_id, session_date, session_time)
+//    VALUES (?, ?, ?, ?, ?)
+//  ";
+//  db.query(query, [user_id, psychologist_id, session_date, session_time], (err, result) => {
+//    if (err) {
+//      console.error('Error inserting session: ' + err.message);
+//     res.status(500).send('Error creating session');
+//    } else {
+//      console.log('Session created');
+//      res.send('Session created successfully');
+//    }
+//  });
+//});
+
+
+
 // const updateUser = async (req, res) => {
 //   const user_name = req.user.user_name;
 //   dbclient.query("SELECT * FROM ");
